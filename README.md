@@ -2,6 +2,8 @@
 
 Bot for a Dungeons and Dragons 5e, (and exalted rolling)
 
+INVITE - https://discord.com/api/oauth2/authorize?client_id=818488309353283624&permissions=414464728128&scope=bot
+
 
 # DUNGEONS AND DRAGONS
 "/dnd make" - makes a random genereted character for a 5e. Rolling all from all races and classes. Also adding API from rases to scores.

@@ -268,7 +268,8 @@ class DungeonsAndDragons():
         self.Imie = genName(self.Plec)
         self.SaveToJson()
         
-    def __init__(self, author, id) -> None:
+    @classmethod
+    def from_file(self, author, id) -> None:
         self.author = author
         file = "".join(["json/data/", str(self.author), ".json"])
         if os.path.isfile(file):

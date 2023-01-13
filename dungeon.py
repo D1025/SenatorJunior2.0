@@ -251,7 +251,10 @@ def IntStats(klasa):
 
 
 class DungeonsAndDragons():
-    def __init__(self, inteligence, author) -> None:
+    def __init__(self) -> None:
+        pass
+    
+    def normal(self, inteligence, author) -> None:
         self.author = author
         self.LosujKlasa()
         self.LosujSub()
@@ -267,8 +270,9 @@ class DungeonsAndDragons():
         self.LosujTraits()
         self.Imie = genName(self.Plec)
         self.SaveToJson()
+        return self
+
         
-    @classmethod
     def from_file(self, author, id) -> None:
         self.author = author
         file = "".join(["json/data/", str(self.author), ".json"])
@@ -284,6 +288,7 @@ class DungeonsAndDragons():
                     self.Rasa = row['rasa']
                     self.Stats = row['stats']
                     self.Traits = row['traits']
+        return self
         
     def LosujKlasa(self):
         self.Klasa =  random.choice(list(class_dir.keys()))

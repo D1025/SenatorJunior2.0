@@ -6,7 +6,7 @@ import miru
 import dungeon
 import roller
 
-bot = lightbulb.BotApp(token=os.environ["TOKEN"])
+bot = lightbulb.BotApp(token=os.environ['TOKEN'])
 miru.install(bot)
 
 @bot.listen(hikari.StartedEvent)
@@ -34,7 +34,7 @@ async def dnd(ctx):
 @lightbulb.command('make', 'Makes random character for dnd 5e')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def make(ctx):
-    Character = dungeon.DungeonsAndDragons(inteligence=ctx.options.intelligence, author=ctx.author.id)
+    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author.id)
     dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
@@ -54,10 +54,10 @@ async def show(ctx):
 
 @dnd.child
 @lightbulb.option('id', 'character number - you can check character list using /dnd show', type=int, required=True)
-@lightbulb.command('show', 'test')
+@lightbulb.command('show', 'shows the full character based on id')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def nime(ctx):
-    Character = dungeon.DungeonsAndDragons.from_file(author=ctx.author.id, id=ctx.options.id)
+    Character = dungeon.DungeonsAndDragons().from_file(author=ctx.author.id, id=ctx.options.id)
     dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())

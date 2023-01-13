@@ -40,20 +40,20 @@ Oh boy, you hate good character, you like see 1 on some stats? That's mode for y
 "/dnd delete" - takes one additional argument - id and exactly as you think it deletes character from databese - PERMAMENTLY!
 
 # TO DO
--Add subraces
+❌Add subraces
 
--Change to class based stystem - done
+✅Change to class based stystem
 
--Add character databese - done
+✅Add character databese
 
--Add charcter customisation (change by imput race/class)
+❌Add charcter customisation (change by imput race/class)
 
--Add random name generator - done
+✅Add random name generator
 
--Add favorite characters mark
+❌Add favorite characters mark
 
--Probalby characters limit for users, not it's not needed
+❌Probalby characters limit for users, not it's not needed
 
 Long term to do:
 
--Add full character creation
+❌Add full character creation

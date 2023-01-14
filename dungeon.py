@@ -179,7 +179,7 @@ def Stats():
         nums = [roll1, roll2, roll3, roll4]
         lowest = min(nums)
         score = roll1 + roll2 + roll3 + roll4 - lowest
-        Statystyki[Statystyki.keys()[i]] = score
+        Statystyki[list(Statystyki.keys())[i]] = score
         
     return Statystyki
 
@@ -194,7 +194,9 @@ def AutisticStats():
 }
 
     for i in range(6):
-        Statystyki[Statystyki.keys()[i]] = random.randint(1, 18)
+        Statystyki[list(Statystyki.keys())[i]] = random.randint(1, 18)
+        
+    return Statystyki
 
 
 def IntStats(klasa):

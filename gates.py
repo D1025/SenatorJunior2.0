@@ -3,7 +3,7 @@ import lightbulb
 import miru
 
 class Gates():
-    def __init__(self, playerOne, playerTwo) -> None:
+    def __init__(self, playerOne, playerTwo, tactics) -> None:
         self.playerOne = playerOne
         self.playerTwo = playerTwo
         self.gateA = 0
@@ -15,6 +15,7 @@ class Gates():
         self.playerFightOne = None
         self.playerFightTwo = None
         self.actualRound = 1
+        self.tactics = tactics
         
     def callGate(self, gate):
         GateString = ""
@@ -50,19 +51,19 @@ class Gates():
         points = gate
         if tacticOne == "S":
             if tacticTwo == "D":
-                points-=1
+                points-=self.tactics
             elif tacticTwo == "P":
-                points+=1
+                points+=self.tactics
         elif tacticOne == "D":
             if tacticTwo == "P":
-                points-=1
+                points-=self.tactics
             elif tacticTwo == "S":
-                points+=1
+                points+=self.tactics
         elif tacticOne == "P":
             if tacticTwo == "S":
-                points-=1
+                points-=self.tactics
             elif tacticTwo == "D":
-                points+=1
+                points+=self.tactics
         points = -warriorsOne+warriorsTwo-pointsOne+pointsTwo
         if points == 0:
             return points
@@ -187,6 +188,32 @@ class Gates():
     hikari.Embed(title=gatename, description=" ")
     .add_field("Fight", value=string,inline=True))
         
+    def callbackSummary(self, tacticsOne, tacticsTwo):
+        
+        tacticsOne=checkTactics(tacticsOne)
+        tacticsTwo=checkTactics(tacticsTwo)
+        
+        if self.returnActualGatesValue()==0:
+            taken = "None"
+        elif self.returnActualGatesValue()>0:
+            taken = self.playerTwo
+        else:
+            taken = self.playerOne
+            
+        if self.actualRound==1:
+            gate = "GATE A"
+        elif self.actualRound==2:
+            gate = "GATE B"
+        else:
+            gate = "GATE C"
+        
+        return (hikari.Embed(title=("SUMMARY "+gate), description="")
+                .add_field((":red_circle: " + str(self.playerOne)), ("Tactic: "+tacticsOne), inline=True)
+                .add_field((":green_circle: " + str(self.playerTwo)), ("Tactic: "+tacticsTwo), inline=True)
+                .add_field("TAKEN", ("BY " + str(taken)), inline=True)
+                .set_footer(("Runda " +str(self.rounds)))
+                )
+        
         
 class ButtonViewGates(miru.View):
     def __init__(self, NGates,  *args, **kwargs) -> None:
@@ -291,12 +318,14 @@ class GateFightModal(miru.Modal):
             await ctx.edit_response(embed=self.NewGates.callbackFight())
         else:
             self.NewGates.setActualGatesValue(self.NewGates.fight(self.NewGates.returnActualGatesValue(), self.NewGates.playerFightOne[0], self.NewGates.playerFightTwo[0], self.NewGates.playerInputOne[self.NewGates.actualRound-1], self.NewGates.playerInputTwo[self.NewGates.actualRound-1], self.NewGates.playerFightOne[1], self.NewGates.playerFightTwo[1]))
-            self.NewGates.actualRound+=1
+            
+            await ctx.edit_response(embed=self.NewGates.callbackSummary(self.NewGates.playerFightOne[0], self.NewGates.playerFightTwo[0]) ,components=[])
+            
             self.NewGates.playerFightOne = None
             self.NewGates.playerFightTwo = None
+            self.NewGates.actualRound+=1
 
             if self.NewGates.actualRound==4:
-                await ctx.edit_response(components=[])
                 self.NewGates.actualRound=1
                 self.NewGates.rounds+=1
                 self.NewGates.playerInputOne = None
@@ -305,7 +334,21 @@ class GateFightModal(miru.Modal):
                 message = await ctx.respond(self.NewGates.callBackEmbed(), components=view.build())
                 await view.start(message)
             else:
-                await ctx.edit_response(embed=self.NewGates.callbackFight())
+                view = ButtonViewFightGates(NGates=self.NewGates, timeout=600)
+                message = await ctx.respond(embed=self.NewGates.callbackFight(), components=view.build())
+                await view.start(message)
         
+        
+        
+
+
+def checkTactics(tactics):
+    if tactics == "P":
+        return "Partyzanka"
+    if tactics == "D":
+        return "Dluga"
+    if tactics == "S":
+        return "Szybka"
+    return "error Tactics"
  
         

@@ -8,7 +8,7 @@ import race as r
 
 
 
-bot = lightbulb.BotApp(token=os.environ["TOKEN"])
+bot = lightbulb.BotApp(token=os.environ("TOKEN"))
 miru.install(bot)
 
 
@@ -30,10 +30,11 @@ async def race(ctx):
     
 @bot.command
 @lightbulb.option("enemy", "Z kim chcesz grac?", type=hikari.User, required=True)
+@lightbulb.option("tactics", "ile daje taktyka - bazowo 1", type=int, required=False, default=1)
 @lightbulb.command("gates", "zagrajmy w bramy")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def gates(ctx):
-    gameGates = g.Gates(ctx.author, ctx.options.enemy)
+    gameGates = g.Gates(ctx.author, ctx.options.enemy, ctx.options.tactics)
     view = g.ButtonViewGates(NGates=gameGates, timeout=600)
     message = await ctx.respond(gameGates.callBackEmbed(), components=view.build())
     await view.start(message)

@@ -5,6 +5,7 @@ import lightbulb
 import miru
 import dungeon
 import roller
+import feedback.feedback as f
 
 bot = lightbulb.BotApp(token=os.environ['TOKEN'])
 miru.install(bot)
@@ -83,6 +84,19 @@ async def roll(ctx):
     rollView = roller.ButtonViewRoller(roll, timeout=30)
     message = await ctx.respond(roll.roll(), components=rollView.build())
     await rollView.start(message)
+    
+
+
+@bot.command
+@lightbulb.option('text', 'enter here your feedback', type=str, required=True)
+@lightbulb.command('feedback', 'send your feedback')
+@lightbulb.implements(lightbulb.SlashCommand)
+async def feedback(ctx):
+    f.feedback(ctx, ctx.options.text)
+    await ctx.respond("Thank you for your feedback")
+    time.sleep(1)
+    await ctx.delete_last_response()
+    await bot.rest.create_message("1063804680263712768", "".join([str(ctx.author), " - ",ctx.options.text]))
    
     
 time.sleep(1)

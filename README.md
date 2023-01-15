@@ -2,7 +2,7 @@
 
 Bot for a Dungeons and Dragons 5e, (and exalted rolling)
 
-INVITE - https://discord.com/api/oauth2/authorize?client_id=818488309353283624&permissions=414464728128&scope=bot
+INVITE - https://discord.com/api/oauth2/authorize?client_id=818488309353283624&permissions=414464867392&scope=bot
 
 
 # DUNGEONS AND DRAGONS

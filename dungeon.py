@@ -120,6 +120,11 @@ def deleteFromJson(author, id):
     if os.path.isfile(file):
         with open(file, 'r') as js:
             data = json.load(js)
+            
+        if data['count']<id:
+            return False
+        if id<=0:
+            return False
         
         newData = {
                 'count':data['count']-1, 
@@ -147,7 +152,17 @@ def deleteFromJson(author, id):
         return True
     return False
         
-
+def Check(author, id):
+    file = "".join(["json/data/", str(author), ".json"])
+    if os.path.isfile(file):
+        with open(file, 'r') as js:
+            data = json.load(js)
+            
+        if data['count']<id:
+            return False
+        if id<=0:
+            return False
+    return True
     
  
 def genName(plec):

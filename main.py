@@ -58,20 +58,25 @@ async def show(ctx):
 @lightbulb.command('show', 'shows the full character based on id')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def nime(ctx):
-    Character = dungeon.DungeonsAndDragons().from_file(author=ctx.author.id, id=ctx.options.id)
-    dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
-    name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
-    message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
-    await dungeonView.start(message)
-    os.remove(name)
+    if dungeon.Check(author=ctx.author.id, id=ctx.options.id):
+        Character = dungeon.DungeonsAndDragons().from_file(author=ctx.author.id, id=ctx.options.id)
+        dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
+        name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
+        message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
+        await dungeonView.start(message)
+        os.remove(name)
+    else:
+        await ctx.respond("Wrong id")
 
 @dnd.child
 @lightbulb.option('id', 'character number - you can check character list using /dnd show', type=int, required=True)
 @lightbulb.command('delete', 'delete character... why?')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def com_delete(ctx):
-    dungeon.deleteFromJson(ctx.author.id, ctx.options.id)
-    await ctx.respond("Deleted... You cannot get it back!")
+    if dungeon.deleteFromJson(ctx.author.id, ctx.options.id):
+        await ctx.respond("Deleted... You cannot get it back!")
+    else:
+        await ctx.respond("Wrong id")
     
 @bot.command
 @lightbulb.option('dices', 'how much dices?', type=int,required=True)

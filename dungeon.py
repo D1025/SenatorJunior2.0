@@ -424,8 +424,11 @@ class ButtonViewDungeon(miru.View):
         self.Dungeon = NDungeon
     @miru.button(label="Change Name")
     async def btn_punkty(self, button: miru.Button, ctx:miru.Context):
-        modal = DungeonModal(NDungeon=self.Dungeon, title="Rozdziel Wojownikow!")
-        await ctx.respond_with_modal(modal)
+        if str(ctx.author.id) == str(self.Dungeon.author):
+            modal = DungeonModal(NDungeon=self.Dungeon, title="Zmień imie!")
+            await ctx.respond_with_modal(modal)
+        else:
+            pass
             
     async def on_timeout(self) -> None:
         for item in self.children:
@@ -440,18 +443,22 @@ class ButtonViewPages(miru.View):
         self.page = page
     @miru.button(emoji="⬅️", style=hikari.ButtonStyle.SUCCESS)
     async def btn_prev(self, button: miru.Button, ctx:miru.Context):
-        if self.page == 1:
+        if str(ctx.author.id) != str(self.Dungeon.author):
             pass
         else:
-            self.page-=1
-            await ctx.edit_response(ShowAll(ctx, self.page))
+            if self.page == 1:
+                pass
+            else:
+                self.page-=1
+                await ctx.edit_response(ShowAll(ctx, self.page))
     @miru.button(label="PAGE", style=hikari.ButtonStyle.SUCCESS)
     async def btn_page(self, button: miru.Button, ctx:miru.Context):
         pass
     @miru.button(emoji="➡️", style=hikari.ButtonStyle.SUCCESS)
     async def btn_next(self, button: miru.Button, ctx:miru.Context):
-        self.page+=1
-        await ctx.edit_response(ShowAll(ctx, self.page))
+        if str(ctx.author.id) == str(self.Dungeon.author):
+            self.page+=1
+            await ctx.edit_response(ShowAll(ctx, self.page))
     
     async def on_timeout(self) -> None:
         for item in self.children:

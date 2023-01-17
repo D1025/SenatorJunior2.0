@@ -7,7 +7,7 @@ import dungeon
 import roller
 import feedback.feedback as f
 
-bot = lightbulb.BotApp(token=os.environ['TOKEN'])
+bot = lightbulb.BotApp(token=os.environ["TOKEN"])
 miru.install(bot)
 
 @bot.listen(hikari.StartedEvent)
@@ -40,6 +40,7 @@ async def make(ctx):
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
     await dungeonView.start(message)
+    time.sleep(0.5)
     os.remove(name)
     
     
@@ -64,6 +65,7 @@ async def nime(ctx):
         name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
         message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
         await dungeonView.start(message)
+        time.sleep(0.5)
         os.remove(name)
     else:
         await ctx.respond("Wrong id")
@@ -104,5 +106,5 @@ async def feedback(ctx):
     await bot.rest.create_message("1063804680263712768", "".join([str(ctx.author), " - ",ctx.options.text]))
    
     
-time.sleep(1)
+time.sleep(0.1)
 bot.run(status=hikari.Status.ONLINE, activity=hikari.Activity(name="version 2.0 baby", type=hikari.ActivityType.PLAYING, url="https://discord.com/api/oauth2/authorize?client_id=818488309353283624&permissions=414464728128&scope=bot"))

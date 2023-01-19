@@ -8,7 +8,7 @@ import race as r
 
 
 
-bot = lightbulb.BotApp(token=os.environ("TOKEN"))
+bot = lightbulb.BotApp(token=os.environ['TOKEN'])
 miru.install(bot)
 
 

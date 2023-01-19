@@ -1,1 +1,715 @@
-{"count":2,"next":null,"previous":null,"results":[{"name":"Dwarf","url":"https://www.dndbeyond.com/avatars/thumbnails/6/254/420/618/636271781394265550.png","asi":[{"attributes":["Constitution"],"value":2}]},{"name":"Elf","url":"https://www.dndbeyond.com/avatars/thumbnails/7/639/420/618/636287075350739045.png","asi":[{"attributes":["Dexterity"],"value":2}]},{"name":"Dragonborn","url":"https://www.dndbeyond.com/avatars/thumbnails/6/340/420/618/636272677995471928.png","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Charisma"],"value":1}]},{"name":"Gnome","url":"https://www.dndbeyond.com/avatars/thumbnails/6/334/420/618/636272671553055253.png","asi":[{"attributes":["Intelligence"],"value":2}]},{"name":"Half-Elf","url":"https://www.dndbeyond.com/avatars/thumbnails/6/481/420/618/636274618102950794.png","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Other"],"value":1},{"attributes":["Other"],"value":1}]},{"name":"Halfling","url":"https://www.dndbeyond.com/avatars/thumbnails/6/256/420/618/636271789409776659.png","asi":[{"attributes":["Dexterity"],"value":2}]},{"name":"Half-Orc","url":"https://www.dndbeyond.com/avatars/thumbnails/6/466/420/618/636274570630462055.png","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Constitution"],"value":1}]},{"name":"Human","url":"https://www.dndbeyond.com/avatars/thumbnails/6/258/420/618/636271801914013762.png","asi":[{"attributes":["Strength"],"value":1},{"attributes":["Dexterity"],"value":1},{"attributes":["Constitution"],"value":1},{"attributes":["Intelligence"],"value":1},{"attributes":["Wisdom"],"value":1},{"attributes":["Charisma"],"value":1}]},{"name":"Tiefling","url":"https://www.dndbeyond.com/avatars/thumbnails/7/641/420/618/636287076637981942.png","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Intelligence"],"value":1}]},{"name":"Leonin","url":"https://pbs.twimg.com/media/Ea_SvhxXkAI4bLi?format=png&name=900x900","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Strength"],"value":1}]},{"name":"Satyr","url":"https://pbs.twimg.com/media/EZes04RWkAE9R45?format=jpg&name=900x900","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Dexterity"],"value":1}]},{"name":"Aasimar","url":"https://static.wikia.nocookie.net/forgottenrealms/images/9/9d/Aasimar-5e.png/revision/latest?cb=20180614210534","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Other"],"value":1}]},{"name":"Bugbear","url":"https://www.dndbeyond.com/avatars/thumbnails/0/221/1000/1000/636252765234633232.jpeg","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Dexterity"],"value":1}]},{"name":"Firbolg","url":"https://www.dndbeyond.com/attachments/9/354/firbolg-artwork.jpg","asi":[{"attributes":["Wisdom"],"value":2},{"attributes":["Strength"],"value":1}]},{"name":"Goblin","url":"","asi":[{"attributes":["Dexterity"],"value":2},{"attributes":["Constitution"],"value":1}]},{"name":"Hobgoblin","url":"","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Intelligence"],"value":1}]},{"name":"Kenku","url":"","asi":[{"attributes":["Dexterity"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Kobold","url":"","asi":[{"attributes":["Dexterity"],"value":2}]},{"name":"Lizardfolk","url":"","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Orc","url":"","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Constitution"],"value":1}]},{"name":"Tabaxi","url":"","asi":[{"attributes":["Dexterity"],"value":2},{"attributes":["Charisma"],"value":1}]},{"name":"Triton","url":"","asi":[{"attributes":["Strength"],"value":1},{"attributes":["Constitution"],"value":1},{"attributes":["Charisma"],"value":1}]},{"name":"Yuan-ti Pureblood","url":"","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Intelligence"],"value":1}]},{"name":"Feral Tiefling","url":"","asi":[{"attributes":["Dexterity"],"value":2},{"attributes":["Intelligence"],"value":1}]},{"name":"Tortle","url":"","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Changeling","url":"","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Other"],"value":1}]},{"name":"Kalashtar","url":"","asi":[{"attributes":["Wisdom"],"value":2},{"attributes":["Charisma"],"value":1}]},{"name":"Warforged","url":"","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Other"],"value":1}]},{"name":"Centaur","url":"","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Loxodon","url":"","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Minotaur","url":"","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Constitution"],"value":1}]},{"name":"Simic Hybrid","url":"","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Other"],"value":1}]},{"name":"Vedalken","url":"","asi":[{"attributes":["Intelligence"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Verdan","url":"","asi":[{"attributes":["Charisma"],"value":2},{"attributes":["Constitution"],"value":1}]},{"name":"Locathah","url":"","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Dexterity"],"value":1}]},{"name":"Grung","url":"","asi":[{"attributes":["Dexterity"],"value":2},{"attributes":["Constitution"],"value":1}]},{"name":"Aarakocra","url":"","asi":[{"attributes":["Dexterity"],"value":2},{"attributes":["Wisdom"],"value":1}]},{"name":"Genasi","url":"","asi":[{"attributes":["Constitution"],"value":2},{"attributes":["Other"],"value":1}]},{"name":"Goliath","url":"","asi":[{"attributes":["Strength"],"value":2},{"attributes":["Constitution"],"value":1}]}]}
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Dwarf",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/254/420/618/636271781394265550.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "Elf",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/7/639/420/618/636287075350739045.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "Dragonborn",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/340/420/618/636272677995471928.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Gnome",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/334/420/618/636272671553055253.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "Half-Elf",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/481/420/618/636274618102950794.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Halfling",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/256/420/618/636271789409776659.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "Half-Orc",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/466/420/618/636274570630462055.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Human",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/6/258/420/618/636271801914013762.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Tiefling",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/7/641/420/618/636287076637981942.png",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Leonin",
+            "url": "https://pbs.twimg.com/media/Ea_SvhxXkAI4bLi?format=png&name=900x900",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Satyr",
+            "url": "https://pbs.twimg.com/media/EZes04RWkAE9R45?format=jpg&name=900x900",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Aasimar",
+            "url": "https://static.wikia.nocookie.net/forgottenrealms/images/9/9d/Aasimar-5e.png/revision/latest?cb=20180614210534",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Bugbear",
+            "url": "https://www.dndbeyond.com/avatars/thumbnails/0/221/1000/1000/636252765234633232.jpeg",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Firbolg",
+            "url": "https://www.dndbeyond.com/attachments/9/354/firbolg-artwork.jpg",
+            "asi": [
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Goblin",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Hobgoblin",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Kenku",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Kobold",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "Lizardfolk",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Orc",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Tabaxi",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Triton",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                },
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Yuan-ti Pureblood",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Feral Tiefling",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Tortle",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Changeling",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Kalashtar",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Warforged",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Centaur",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Loxodon",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Minotaur",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Simic Hybrid",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Vedalken",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Intelligence"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Verdan",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Charisma"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Locathah",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Grung",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Aarakocra",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Dexterity"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Wisdom"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Genasi",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Other"
+                    ],
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "Goliath",
+            "url": "",
+            "asi": [
+                {
+                    "attributes": [
+                        "Strength"
+                    ],
+                    "value": 2
+                },
+                {
+                    "attributes": [
+                        "Constitution"
+                    ],
+                    "value": 1
+                }
+            ]
+        }
+    ]
+}

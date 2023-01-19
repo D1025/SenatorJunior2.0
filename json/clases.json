@@ -1,1 +1,446 @@
-{"count":12,"next":null,"previous":null,"results":[{"name":"Barbarian","primary":"Dexterity","prof_saving_throws":"Strength, Constitution","archetype":[{"name":"Path of Ancestral Guardian"},{"name":"Path of Battlerager"},{"name":"Path of Beast"},{"name":"Path of Berserker"},{"name":"Path of Storm Herald"},{"name":"Path of Totem Warrior"},{"name":"Path of Wild Magic"},{"name":"Path of Zealot"}]},{"name":"Bard","primary":"Charisma","prof_saving_throws":"Dexterity, Charisma","archetype":[{"name":"Collage of Creation"},{"name":"Collage of Eloquence"},{"name":"Collage of Glamour"},{"name":"Collage of Lore"},{"name":"Collage of Spirits"},{"name":"Collage of Swords"},{"name":"Collage of Valor"},{"name":"Collage of Whispers"}]},{"name":"Cleric","primary":"Wisdom","prof_saving_throws":"Wisdom, Charisma","archetype":[{"name":"Domain of Arcana"},{"name":"Domain of Death"},{"name":"Domain of Forge"}, {"name":"Domain of Grave"},{"name":"Domain of Knowledge"},{"name":"Domain of Life"},{"name":"Domain of Light"},{"name":"Domain of Nature"},{"name":"Domain of Order"},{"name":"Domain of Peace"},{"name":"Domain of Tempest"},{"name":"Domain of Trickery"},{"name":"Domain of Twilight"},{"name":"Domain of War"}]},{"name":"Druid","primary":"Wisdom","prof_saving_throws":"Intelligence, Wisdom","archetype":[{"name":"Circle of Dreams"},{"name":"Circle of Land"},{"name":"Circle of Moon"},{"name":"Circle of Shepherd"},{"name":"Circle of Spores"},{"name":"Circle of Stars"},{"name":"Circle of Wildfire"}]},{"name":"Fighter","primary":"Dexterity","prof_saving_throws":"Strength, Dexterity","archetype":[{"name":"Arcane Archer"},{"name":"Banneret"},{"name":"Battle Master"},{"name":"Cavalier"},{"name":"Champion"},{"name":"Echo Knight"},{"name":"Eldritch Knight"},{"name":"Psi Warrior"},{"name":"Rune Knight"},{"name":"Samurai"}]},{"name":"Monk","primary":"Wisdom","prof_saving_throws":"Strength, Dexterity","archetype":[{"name":"Tradition of the Astral Self"},{"name":"Tradition of the Ascendant Dragon"},{"name":"Tradition of the Drunken Master"},{"name":"Tradition of the Four Elements"},{"name":"Tradition of the Kensei"},{"name":"Tradition of the Long Death"},{"name":"Tradition of the Mercy"},{"name":"Tradition of the Open Hand"},{"name":"Tradition of the Shadow"},{"name":"Tradition of the Sun Soul"}]},{"name":"Paladin","primary":"Charisma","prof_saving_throws":"Wisdom, Charisma","archetype":[{"name":"Oath of Ancients"},{"name":"Oath of Conquest"},{"name":"Oath of Crown"},{"name":"Oath of Devotion"},{"name":"Oath of Glory"},{"name":"Oath of Redemption"},{"name":"Oath of Vengeance"},{"name":"Oath of Watchers"},{"name":"Oathbreaker"}]},{"name":"Ranger","primary":"Dexterity","prof_saving_throws":"Dexterity, Wisdom","archetype":[{"name":"Beast Master Conclave"},{"name":"Fey Wanderer Conclave"},{"name":"Gloom Stalker Conclave"},{"name":"Horizon Walker Conclave"},{"name":"Hunter Conclave"},{"name":"Monster Slayer Conclave"},{"name":"Swarmkeeper Conclave"},{"name":"Drakewarden Conclave"}]},{"name":"Rogue","primary":"Dexterity","prof_saving_throws":"Dexterity, Intelligence","archetype":[{"name":"Arcane Trickster"},{"name":"Assassin"},{"name":"Inquisitive"},{"name":"Mastermind"},{"name":"Phantom"},{"name":"Scout"},{"name":"Soulknife"},{"name":"Swashbuckler"},{"name":"Thief"}]},{"name":"Sorcerer","primary":"Charisma","prof_saving_throws":"Constitution, Charisma","archetype":[{"name":"Aberrant Mind"},{"name":"Clockwork Soul"},{"name":"Draconic Bloodline"},{"name":"Divine Soul"},{"name":"Shadow Magic"},{"name":"Storm Sorcery"},{"name":"Wild Magic"}]},{"name":"Warlock","primary":"Charisma","prof_saving_throws":"Wisdom, Charisma","archetype":[{"name":"Archfey Patron"},{"name":"Celestial Patron"},{"name":"Fathomless Patron"},{"name":"Fiend Patron"},{"name":"Genie Patron"},{"name":"Great Old One Patron"},{"name":"Hexblade Patron"},{"name":"Undead Patron"},{"name":"Undying Patron"}]},{"name":"Wizard","primary":"Intelligence","prof_saving_throws":"Intelligence, Wisdom","archetype":[{"name":"School of War Magic"},{"name":"School of Abjuration"},{"name":"School of Bladesinging"},{"name":"School of Chronurgy"},{"name":"School of Conjuration"},{"name":"School of Divination"},{"name":"School of Enchantment"},{"name":"School of Evocation"},{"name":"School of Graviturgy"},{"name":"School of Illusion"},{"name":"School of Necromancy"},{"name":"School of Order of Scribes"},{"name":"School of Transmutation"}]},{"name":"Artificer","primary":"Intelligence","prof_saving_throws":"Constitution, Intelligence","archetype":[{"name":"Alchemist"},{"name":"Armorer"},{"name":"Artillerist"},{"name":"Battle Smith"}]}]}
+{
+    "count": 12,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Barbarian",
+            "primary": "Dexterity",
+            "prof_saving_throws": "Strength, Constitution",
+            "archetype": [
+                {
+                    "name": "Path of Ancestral Guardian"
+                },
+                {
+                    "name": "Path of Battlerager"
+                },
+                {
+                    "name": "Path of Beast"
+                },
+                {
+                    "name": "Path of Berserker"
+                },
+                {
+                    "name": "Path of Storm Herald"
+                },
+                {
+                    "name": "Path of Totem Warrior"
+                },
+                {
+                    "name": "Path of Wild Magic"
+                },
+                {
+                    "name": "Path of Zealot"
+                }
+            ]
+        },
+        {
+            "name": "Bard",
+            "primary": "Charisma",
+            "prof_saving_throws": "Dexterity, Charisma",
+            "archetype": [
+                {
+                    "name": "Collage of Creation"
+                },
+                {
+                    "name": "Collage of Eloquence"
+                },
+                {
+                    "name": "Collage of Glamour"
+                },
+                {
+                    "name": "Collage of Lore"
+                },
+                {
+                    "name": "Collage of Spirits"
+                },
+                {
+                    "name": "Collage of Swords"
+                },
+                {
+                    "name": "Collage of Valor"
+                },
+                {
+                    "name": "Collage of Whispers"
+                }
+            ]
+        },
+        {
+            "name": "Cleric",
+            "primary": "Wisdom",
+            "prof_saving_throws": "Wisdom, Charisma",
+            "archetype": [
+                {
+                    "name": "Domain of Arcana"
+                },
+                {
+                    "name": "Domain of Death"
+                },
+                {
+                    "name": "Domain of Forge"
+                },
+                {
+                    "name": "Domain of Grave"
+                },
+                {
+                    "name": "Domain of Knowledge"
+                },
+                {
+                    "name": "Domain of Life"
+                },
+                {
+                    "name": "Domain of Light"
+                },
+                {
+                    "name": "Domain of Nature"
+                },
+                {
+                    "name": "Domain of Order"
+                },
+                {
+                    "name": "Domain of Peace"
+                },
+                {
+                    "name": "Domain of Tempest"
+                },
+                {
+                    "name": "Domain of Trickery"
+                },
+                {
+                    "name": "Domain of Twilight"
+                },
+                {
+                    "name": "Domain of War"
+                }
+            ]
+        },
+        {
+            "name": "Druid",
+            "primary": "Wisdom",
+            "prof_saving_throws": "Intelligence, Wisdom",
+            "archetype": [
+                {
+                    "name": "Circle of Dreams"
+                },
+                {
+                    "name": "Circle of Land"
+                },
+                {
+                    "name": "Circle of Moon"
+                },
+                {
+                    "name": "Circle of Shepherd"
+                },
+                {
+                    "name": "Circle of Spores"
+                },
+                {
+                    "name": "Circle of Stars"
+                },
+                {
+                    "name": "Circle of Wildfire"
+                }
+            ]
+        },
+        {
+            "name": "Fighter",
+            "primary": "Dexterity",
+            "prof_saving_throws": "Strength, Dexterity",
+            "archetype": [
+                {
+                    "name": "Arcane Archer"
+                },
+                {
+                    "name": "Banneret"
+                },
+                {
+                    "name": "Battle Master"
+                },
+                {
+                    "name": "Cavalier"
+                },
+                {
+                    "name": "Champion"
+                },
+                {
+                    "name": "Echo Knight"
+                },
+                {
+                    "name": "Eldritch Knight"
+                },
+                {
+                    "name": "Psi Warrior"
+                },
+                {
+                    "name": "Rune Knight"
+                },
+                {
+                    "name": "Samurai"
+                }
+            ]
+        },
+        {
+            "name": "Monk",
+            "primary": "Wisdom",
+            "prof_saving_throws": "Strength, Dexterity",
+            "archetype": [
+                {
+                    "name": "Tradition of the Astral Self"
+                },
+                {
+                    "name": "Tradition of the Ascendant Dragon"
+                },
+                {
+                    "name": "Tradition of the Drunken Master"
+                },
+                {
+                    "name": "Tradition of the Four Elements"
+                },
+                {
+                    "name": "Tradition of the Kensei"
+                },
+                {
+                    "name": "Tradition of the Long Death"
+                },
+                {
+                    "name": "Tradition of the Mercy"
+                },
+                {
+                    "name": "Tradition of the Open Hand"
+                },
+                {
+                    "name": "Tradition of the Shadow"
+                },
+                {
+                    "name": "Tradition of the Sun Soul"
+                }
+            ]
+        },
+        {
+            "name": "Paladin",
+            "primary": "Charisma",
+            "prof_saving_throws": "Wisdom, Charisma",
+            "archetype": [
+                {
+                    "name": "Oath of Ancients"
+                },
+                {
+                    "name": "Oath of Conquest"
+                },
+                {
+                    "name": "Oath of Crown"
+                },
+                {
+                    "name": "Oath of Devotion"
+                },
+                {
+                    "name": "Oath of Glory"
+                },
+                {
+                    "name": "Oath of Redemption"
+                },
+                {
+                    "name": "Oath of Vengeance"
+                },
+                {
+                    "name": "Oath of Watchers"
+                },
+                {
+                    "name": "Oathbreaker"
+                }
+            ]
+        },
+        {
+            "name": "Ranger",
+            "primary": "Dexterity",
+            "prof_saving_throws": "Dexterity, Wisdom",
+            "archetype": [
+                {
+                    "name": "Beast Master Conclave"
+                },
+                {
+                    "name": "Fey Wanderer Conclave"
+                },
+                {
+                    "name": "Gloom Stalker Conclave"
+                },
+                {
+                    "name": "Horizon Walker Conclave"
+                },
+                {
+                    "name": "Hunter Conclave"
+                },
+                {
+                    "name": "Monster Slayer Conclave"
+                },
+                {
+                    "name": "Swarmkeeper Conclave"
+                },
+                {
+                    "name": "Drakewarden Conclave"
+                }
+            ]
+        },
+        {
+            "name": "Rogue",
+            "primary": "Dexterity",
+            "prof_saving_throws": "Dexterity, Intelligence",
+            "archetype": [
+                {
+                    "name": "Arcane Trickster"
+                },
+                {
+                    "name": "Assassin"
+                },
+                {
+                    "name": "Inquisitive"
+                },
+                {
+                    "name": "Mastermind"
+                },
+                {
+                    "name": "Phantom"
+                },
+                {
+                    "name": "Scout"
+                },
+                {
+                    "name": "Soulknife"
+                },
+                {
+                    "name": "Swashbuckler"
+                },
+                {
+                    "name": "Thief"
+                }
+            ]
+        },
+        {
+            "name": "Sorcerer",
+            "primary": "Charisma",
+            "prof_saving_throws": "Constitution, Charisma",
+            "archetype": [
+                {
+                    "name": "Aberrant Mind"
+                },
+                {
+                    "name": "Clockwork Soul"
+                },
+                {
+                    "name": "Draconic Bloodline"
+                },
+                {
+                    "name": "Divine Soul"
+                },
+                {
+                    "name": "Shadow Magic"
+                },
+                {
+                    "name": "Storm Sorcery"
+                },
+                {
+                    "name": "Wild Magic"
+                }
+            ]
+        },
+        {
+            "name": "Warlock",
+            "primary": "Charisma",
+            "prof_saving_throws": "Wisdom, Charisma",
+            "archetype": [
+                {
+                    "name": "Archfey Patron"
+                },
+                {
+                    "name": "Celestial Patron"
+                },
+                {
+                    "name": "Fathomless Patron"
+                },
+                {
+                    "name": "Fiend Patron"
+                },
+                {
+                    "name": "Genie Patron"
+                },
+                {
+                    "name": "Great Old One Patron"
+                },
+                {
+                    "name": "Hexblade Patron"
+                },
+                {
+                    "name": "Undead Patron"
+                },
+                {
+                    "name": "Undying Patron"
+                }
+            ]
+        },
+        {
+            "name": "Wizard",
+            "primary": "Intelligence",
+            "prof_saving_throws": "Intelligence, Wisdom",
+            "archetype": [
+                {
+                    "name": "School of War Magic"
+                },
+                {
+                    "name": "School of Abjuration"
+                },
+                {
+                    "name": "School of Bladesinging"
+                },
+                {
+                    "name": "School of Chronurgy"
+                },
+                {
+                    "name": "School of Conjuration"
+                },
+                {
+                    "name": "School of Divination"
+                },
+                {
+                    "name": "School of Enchantment"
+                },
+                {
+                    "name": "School of Evocation"
+                },
+                {
+                    "name": "School of Graviturgy"
+                },
+                {
+                    "name": "School of Illusion"
+                },
+                {
+                    "name": "School of Necromancy"
+                },
+                {
+                    "name": "School of Order of Scribes"
+                },
+                {
+                    "name": "School of Transmutation"
+                }
+            ]
+        },
+        {
+            "name": "Artificer",
+            "primary": "Intelligence",
+            "prof_saving_throws": "Constitution, Intelligence",
+            "archetype": [
+                {
+                    "name": "Alchemist"
+                },
+                {
+                    "name": "Armorer"
+                },
+                {
+                    "name": "Artillerist"
+                },
+                {
+                    "name": "Battle Smith"
+                }
+            ]
+        }
+    ]
+}

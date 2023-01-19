@@ -1,4 +1,5 @@
 import os
+import sqlite3
 import time
 import hikari
 import lightbulb
@@ -6,13 +7,15 @@ import miru
 import dungeon
 import roller
 import feedback.feedback as f
+import data as d
 
-bot = lightbulb.BotApp(token=os.environ["TOKEN"])
+bot = lightbulb.BotApp(token=os.environ['TOKEN'])
 miru.install(bot)
+conn = sqlite3.connect('database/SenatorJunior.db')
 
 @bot.listen(hikari.StartedEvent)
 async def on_started(event):
-    dungeon.BuffFromJson()
+    # dungeon.BuffFromJson()
     print("Bot has started!")
     
     
@@ -35,11 +38,12 @@ async def dnd(ctx):
 @lightbulb.command('make', 'Makes random character for dnd 5e')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def make(ctx):
-    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author.id)
+    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author, conn=conn)
     dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
     await dungeonView.start(message)
+    time.sleep(0.5)
     os.remove(name)
     
     
@@ -47,8 +51,8 @@ async def make(ctx):
 @lightbulb.command('show-all', 'shows all characters you made')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def show(ctx):
-    pointsView = dungeon.ButtonViewPages(1, timeout=120)
-    message = await ctx.respond(dungeon.ShowAll(ctx, 1), components = pointsView.build())
+    pointsView = dungeon.ButtonViewPages(conn=conn, autid=ctx.author.id, page=1, timeout=120)
+    message = await ctx.respond(dungeon.DataShowAll(conn, ctx, 1), components = pointsView.build())
     await pointsView.start(message)
     
 
@@ -58,8 +62,8 @@ async def show(ctx):
 @lightbulb.command('show', 'shows the full character based on id')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def nime(ctx):
-    if dungeon.Check(author=ctx.author.id, id=ctx.options.id):
-        Character = dungeon.DungeonsAndDragons().from_file(author=ctx.author.id, id=ctx.options.id)
+    if d.ifCharCheck(cursor=conn.cursor(),author=ctx.author, id=ctx.options.id):
+        Character = dungeon.DungeonsAndDragons().fromData(conn=conn,author=ctx.author, id=ctx.options.id)
         dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
         name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
         message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
@@ -74,7 +78,7 @@ async def nime(ctx):
 @lightbulb.command('delete', 'delete character... why?')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def com_delete(ctx):
-    if dungeon.deleteFromJson(ctx.author.id, ctx.options.id):
+    if dungeon.deleteFromData(conn,ctx.author, ctx.options.id):
         await ctx.respond("Deleted... You cannot get it back!")
     else:
         await ctx.respond("Wrong id")
@@ -104,6 +108,6 @@ async def feedback(ctx):
     await ctx.delete_last_response()
     await bot.rest.create_message("1063804680263712768", "".join([str(ctx.author), " - ",ctx.options.text]))
    
-    
-time.sleep(0.1)
-bot.run(status=hikari.Status.ONLINE, activity=hikari.Activity(name="version 2.0 baby", type=hikari.ActivityType.PLAYING, url="https://discord.com/api/oauth2/authorize?client_id=818488309353283624&permissions=414464728128&scope=bot"))
+
+time.sleep(0.1)    
+bot.run(status=hikari.Status.ONLINE, activity=hikari.Activity(name="version 2.1 baby", type=hikari.ActivityType.PLAYING, url="https://discord.com/api/oauth2/authorize?client_id=818488309353283624&permissions=414464728128&scope=bot"))

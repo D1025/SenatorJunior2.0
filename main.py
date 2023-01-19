@@ -40,7 +40,6 @@ async def make(ctx):
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
     await dungeonView.start(message)
-    time.sleep(0.5)
     os.remove(name)
     
     

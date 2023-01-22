@@ -9,9 +9,10 @@ import roller
 import feedback.feedback as f
 import data as d
 
-bot = lightbulb.BotApp(token=os.environ['TOKEN'])
+bot = lightbulb.BotApp(token=os.environ("TOKEN"))
 miru.install(bot)
 conn = sqlite3.connect('database/SenatorJunior.db')
+
 
 @bot.listen(hikari.StartedEvent)
 async def on_started(event):
@@ -29,6 +30,7 @@ async def dnd(ctx):
     
 
 @dnd.child
+@lightbulb.option('rase', 'choose rase for your character', type=str,required=False, default='Random')
 @lightbulb.option('intelligence',
                   "Do you want turn off intelligence stats?",
                   type=str,
@@ -38,7 +40,7 @@ async def dnd(ctx):
 @lightbulb.command('make', 'Makes random character for dnd 5e')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def make(ctx):
-    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author, conn=conn)
+    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author, conn=conn, rase=d.checkRase(conn.cursor(), ctx.options.rase))
     dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
@@ -82,12 +84,18 @@ async def com_delete(ctx):
         await ctx.respond("Deleted... You cannot get it back!")
     else:
         await ctx.respond("Wrong id")
+        
+@dnd.child
+@lightbulb.command('rases', 'shows all rases that bot can understand')
+@lightbulb.implements(lightbulb.SlashSubCommand)
+async def show_all_rases(ctx):
+    await ctx.respond(embed=dungeon.ShowRases(conn.cursor()))
     
 @bot.command
 @lightbulb.option('dices', 'how much dices?', type=int,required=True)
 @lightbulb.option('type', 'choose your style of rolling', type=str, required=False, choices=["exalted",  "exalted-damage"], default="exalted")
 @lightbulb.option('automatic', 'auto successes added to exalted roller', type=int, required=False, default=0)
-@lightbulb.command('roll', 'LETS ROLL!')
+@lightbulb.command('roll', 'roller for white wolf systems')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def roll(ctx):
     roll = roller.roller(ctx.author, ctx.options.dices, ctx.options.type, 7, ctx.options.automatic)

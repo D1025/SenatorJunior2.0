@@ -35,6 +35,14 @@ last_name = []
 
 
 
+def ShowRases(cursor):
+    rases = data.allRases(cursor)
+    New_str = ""
+    for element in rases:
+        New_str+=str(element+"\n")
+    return hikari.Embed(title="RASES", description=New_str, color=random.choice(colors.colors_list))
+    
+
 def BuffFromJson():
 #   # PERSONALITY
 #   global personality
@@ -318,7 +326,7 @@ class DungeonsAndDragons():
     def __init__(self) -> None:
         pass
     
-    def normal(self, inteligence, author, conn) -> None:
+    def normal(self, inteligence, author, conn, rase) -> None:
         self.conn = conn
         self.author = author
         self.LosujKlasa()
@@ -330,7 +338,7 @@ class DungeonsAndDragons():
             self.Stats = Stats()
         else:
             self.Stats = IntStats(self.Primary)
-        self.LosujRasa()
+        self.LosujRasa(rase)
         # self.Opis
         self.LosujTraits()
         self.genName()
@@ -398,9 +406,12 @@ class DungeonsAndDragons():
         self.Subklasa = row[0][0]
         # self.Subklasa =  random.choice(class_dir[self.Klasa])
     
-    def LosujRasa(self):
+    def LosujRasa(self, rase):
         c = self.conn.cursor()
-        c.execute("SELECT RASE.name, STATS.strength, STATS.dexterity, STATS.constitution, STATS.intelligence, STATS.wisdom, STATS.charisma, STATS.other FROM RASE JOIN STATS ON RASE.bonus_stats=STATS.stats_id ORDER BY RANDOM() LIMIT 1")
+        if rase == "Random":
+            c.execute("SELECT RASE.name, STATS.strength, STATS.dexterity, STATS.constitution, STATS.intelligence, STATS.wisdom, STATS.charisma, STATS.other FROM RASE JOIN STATS ON RASE.bonus_stats=STATS.stats_id ORDER BY RANDOM() LIMIT 1")
+        else:
+            c.execute("SELECT RASE.name, STATS.strength, STATS.dexterity, STATS.constitution, STATS.intelligence, STATS.wisdom, STATS.charisma, STATS.other FROM RASE JOIN STATS ON RASE.bonus_stats=STATS.stats_id WHERE RASE.name = ? LIMIT 1", (str(rase),))
         rows = c.fetchall()
         self.Rasa = rows[0][0]
         for i in range(0,6):

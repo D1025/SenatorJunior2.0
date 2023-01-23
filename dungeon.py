@@ -326,12 +326,18 @@ class DungeonsAndDragons():
     def __init__(self) -> None:
         pass
     
-    def normal(self, inteligence, author, conn, rase) -> None:
+    def normal(self, inteligence, author, conn, rase, klasa, subklasa, sex) -> None:
         self.conn = conn
         self.author = author
-        self.LosujKlasa()
-        self.LosujSub()
-        self.Plec = random.choice(["Melee", "Femelee"])
+        self.LosujKlasa(klasa)
+        if subklasa == "Random":
+            self.LosujSub()
+        else:
+            self.Subklasa = subklasa
+        if sex == "Random":
+            self.Plec = random.choice(["Melee", "Femelee"])
+        else:
+            self.Plec = sex
         if inteligence == "Autistic":
             self.Stats = AutisticStats()
         elif inteligence != "No":
@@ -391,9 +397,12 @@ class DungeonsAndDragons():
         return self
         
         
-    def LosujKlasa(self):
+    def LosujKlasa(self, klasa):
         c = self.conn.cursor()
-        c.execute("SELECT name, primary_att FROM CLASS ORDER BY RANDOM() LIMIT 1")
+        if klasa == "Random":
+            c.execute("SELECT name, primary_att FROM CLASS ORDER BY RANDOM() LIMIT 1")
+        else:
+            c.execute("SELECT name, primary_att FROM CLASS WHERE name = ? LIMIT 1", (klasa,))
         row = c.fetchall()
         self.Klasa = row[0][0]
         self.Primary = row[0][1]

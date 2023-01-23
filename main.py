@@ -9,7 +9,7 @@ import roller
 import feedback.feedback as f
 import data as d
 
-bot = lightbulb.BotApp(token=os.environ("TOKEN"))
+bot = lightbulb.BotApp(token=os.environ["TOKEN"])
 miru.install(bot)
 conn = sqlite3.connect('database/SenatorJunior.db')
 
@@ -30,7 +30,10 @@ async def dnd(ctx):
     
 
 @dnd.child
-@lightbulb.option('rase', 'choose rase for your character', type=str,required=False, default='Random')
+@lightbulb.option('char_race', 'choose race for your character, none="RANDOM"', type=str,required=False, default='Random')
+@lightbulb.option('char_class', 'choose class for your character, none="RANDOM"', type=str,required=False, default='Random')
+@lightbulb.option('char_subclass', 'choose subclass for your character, none="RANDOM"', type=str,required=False, default='Random')
+@lightbulb.option('char_sex', 'choose subclass for your character, none="RANDOM"', type=str,required=False, choices=["Melee", "Femelee"],default='Random')
 @lightbulb.option('intelligence',
                   "Do you want turn off intelligence stats?",
                   type=str,
@@ -40,7 +43,8 @@ async def dnd(ctx):
 @lightbulb.command('make', 'Makes random character for dnd 5e')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def make(ctx):
-    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author, conn=conn, rase=d.checkRase(conn.cursor(), ctx.options.rase))
+    klasa, subklasa = d.checkSubclass(conn.cursor(), ctx.options.char_class, ctx.options.char_subclass)
+    Character = dungeon.DungeonsAndDragons().normal(inteligence=ctx.options.intelligence, author=ctx.author, conn=conn, rase=d.checkRase(conn.cursor(), ctx.options.char_race), klasa=klasa, subklasa=subklasa, sex=ctx.options.char_sex)
     dungeonView = dungeon.ButtonViewDungeon(NDungeon=Character, timeout=120)
     name = "".join(["Arts/Stats/",str(ctx.author.id), ".png"])
     message = await ctx.respond(Character.ReturnEmbed(ctx,name), components=dungeonView.build())
@@ -86,7 +90,7 @@ async def com_delete(ctx):
         await ctx.respond("Wrong id")
         
 @dnd.child
-@lightbulb.command('rases', 'shows all rases that bot can understand')
+@lightbulb.command('races', 'shows all races that bot can understand')
 @lightbulb.implements(lightbulb.SlashSubCommand)
 async def show_all_rases(ctx):
     await ctx.respond(embed=dungeon.ShowRases(conn.cursor()))

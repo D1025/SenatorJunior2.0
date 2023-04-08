@@ -79,8 +79,9 @@ class ButtonViewRoller(miru.View):
             
             
 def kultroller(ctx, bonus:int):
-    roll = list.append(random.randint(1,10))
-    roll = list.append(random.randint(1,10))
+    roll = []
+    roll.append(random.randint(1,10))
+    roll.append(random.randint(1,10))
     suma = sum(roll)+bonus
     embed = hikari.Embed(title=ctx.author, description=f"you rolled **{roll[0]}, {roll[1]}** + {bonus} = **{suma}**",
                          color=random.choice(colors.colors_list))

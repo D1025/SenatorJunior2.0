@@ -469,15 +469,18 @@ class DungeonsAndDragons():
         #     self.Traits.append(rand)
     
     def ReturnEmbed(self, ctx, name):
-        final = ("**Rasa:** " + self.Rasa + "\n" + 
-                "**Klasa:** " + self.Klasa + '\n' + 
-                "**Subklasa:** " + self.Subklasa + '\n' + 
+        final = ("**Race:** " + self.Rasa + "\n" + 
+                "**Class:** " + self.Klasa + '\n' + 
+                "**Subclass:** " + self.Subklasa + '\n' + 
                 str(self.Stats) + '\n' + 
                 '**Sex:** ' + self.Plec + '\n' + 
                 '**Personality:** ')
         
         for trait in self.Traits:
-            final += str(trait) + " "
+            if trait == self.Traits[-1]:
+                final += str(trait)
+            else:
+                final += str(trait) + ", "
         
         paiting.Paint(self.Stats, name)
         return (

@@ -77,3 +77,20 @@ class ButtonViewRoller(miru.View):
         self.stop()
 
             
+            
+def kultroller(ctx, bonus:int):
+    roll = list.append(random.randint(1,10))
+    roll = list.append(random.randint(1,10))
+    suma = sum(roll)+bonus
+    embed = hikari.Embed(title=ctx.author, description=f"you rolled **{roll[0]}, {roll[1]}** + {bonus} = **{suma}**",
+                         color=random.choice(colors.colors_list))
+    if suma>=15:
+        embed.add_field(name="SCORE", value="You have succeeded.")
+    elif suma>=10:
+        embed.add_field(name="SCORE", value="It didn't turn out exactly as you wanted.")
+    else:
+        embed.add_field(name="SCORE", value="You have failed.")
+    return (embed.set_footer(" ".join([str(ctx.author), "●",str(time.strftime("%H:%M"))])))
+        
+        
+        

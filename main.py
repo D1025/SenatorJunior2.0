@@ -108,6 +108,12 @@ async def roll(ctx):
     await rollView.start(message)
     
 
+@bot.command
+@lightbulb.option('bonus', 'your big scary bonus', type=int,required=False, default=0)
+@lightbulb.command('kult', 'roller for kult: divinity lost system')
+@lightbulb.implements(lightbulb.SlashCommand)
+async def roll(ctx):
+    await ctx.respond(embed=roller.kultroller(ctx, ctx.options.bonus))
 
 @bot.command
 @lightbulb.option('text', 'enter here your feedback', type=str, required=True)

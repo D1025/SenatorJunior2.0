@@ -243,7 +243,7 @@ class ButtonView(miru.View):
         super().__init__(*args, **kwargs)
         self.NewEmbed = NEmbed
     @miru.button(label="Dodaj uczestnika")
-    async def btn_uczestnik(self, button: miru.Button, ctx:miru.ViewContext):
+    async def btn_uczestnik(self, button: miru.Button, ctx:miru.Context):
         modal = NameModal(NEmbed=self.NewEmbed,title="Dodaj uczestnika")
         # await ctx.edit_response("You clicked me")
         # await modal.send(ctx.interaction)
@@ -273,7 +273,7 @@ class ButtonView2(miru.View):
         super().__init__(*args, **kwargs)
         self.NewEmbed = NEmbed
     @miru.button(label="Punkty")
-    async def btn_punkty(self, button: miru.Button, ctx:miru.ViewContext):
+    async def btn_punkty(self, button: miru.Button, ctx:miru.Context):
         if self.NewEmbed.Points.End():
             for item in self.children:
                 item.disabled = True # Disable all items attached to the view

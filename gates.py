@@ -220,7 +220,7 @@ class ButtonViewGates(miru.View):
         super().__init__(*args, **kwargs)
         self.NewGates = NGates
     @miru.button(label="Insert")
-    async def btn_punkty(self, button: miru.Button, ctx:miru.ViewContext):
+    async def btn_punkty(self, button: miru.Button, ctx:miru.Context):
         if self.NewGates.rounds == 4:
             await self.message.edit(components=[])
             await ctx.respond(embed=(hikari.Embed(title=self.NewGates.ReturnWin())))
@@ -240,7 +240,7 @@ class ButtonViewFightGates(miru.View):
         super().__init__(*args, **kwargs)
         self.NewGates = NGates
     @miru.button(label="Fight")
-    async def btn_punkty(self, button: miru.Button, ctx:miru.ViewContext):
+    async def btn_punkty(self, button: miru.Button, ctx:miru.Context):
         if self.NewGates.playerInputOne[self.NewGates.actualRound-1]==0 and not self.NewGates.returnActualGatesValue()<0:
             self.NewGates.addActualGatesValue(self.NewGates.playerInputTwo[self.NewGates.actualRound-1])
             self.NewGates.actualRound+=1

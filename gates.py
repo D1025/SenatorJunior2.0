@@ -50,6 +50,8 @@ class Gates():
             self.playerFightTwo = playerInput
         
     def fight(self, gate, tacticOne, tacticTwo, warriorsOne, warriorsTwo, pointsOne, pointsTwo):
+        print("===FIGHT===")
+        print(gate, tacticOne, tacticTwo, warriorsOne, warriorsTwo, pointsOne, pointsTwo)
         points = gate
         if tacticOne == "S":
             if tacticTwo == "D":
@@ -66,6 +68,7 @@ class Gates():
                 points-=self.tactics
             elif tacticTwo == "D":
                 points+=self.tactics
+        print("Points after tactics: ", points)
         points = -warriorsOne+warriorsTwo-pointsOne+pointsTwo
         if points == 0:
             return points
@@ -83,6 +86,7 @@ class Gates():
             elif points > 0:
                 if points > warriorsTwo+gate:
                     points = warriorsTwo+gate
+        print("Points after fight: ", points)
         return points
     
     def returnActualGatesValue(self):

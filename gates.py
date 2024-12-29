@@ -30,18 +30,20 @@ class Gates():
         return GateString
     
     def playerInput(self, player, playerInput):
-        print(self.playerTwo.id==player.id)
-        print(self.playerTwo)
-        print(player)
+        # print(self.playerTwo.id==player.id)
+        # print(self.playerTwo)
+        # print(player)
+        print(playerInput, player)
         if self.playerOne.id == player.id:
             self.playerInputOne = playerInput
         if self.playerTwo.id == player.id:
             self.playerInputTwo = playerInput
             
     def playerFInput(self, player, playerInput):
-        print(self.playerTwo.id==player.id)
-        print(self.playerTwo)
-        print(player)
+        # print(self.playerTwo.id==player.id)
+        # print(self.playerTwo)
+        # print(player)
+        print(playerInput, player)
         if self.playerOne.id == player.id:
             self.playerFightOne = playerInput
         if self.playerTwo.id == player.id:
@@ -314,6 +316,7 @@ class GateFightModal(miru.Modal):
 
     async def callback(self, ctx: miru.ModalContext) -> None:
         self.NewGates.playerFInput(ctx.author, [self.taktyka.value, int(self.sukcesy.value)])
+        print([self.taktyka.value, int(self.sukcesy.value)], ctx.author)
         if self.NewGates.playerFightOne is None or self.NewGates.playerFightTwo is None:
             await ctx.edit_response(embed=self.NewGates.callbackFight())
         else:
